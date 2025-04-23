@@ -16,3 +16,9 @@ python generateContext.py --instructions "My specific request blah"
 ```
 
 6. The prompt will be generated to the `./output` directory with a date and time stamp. Simply open the newest file and copy and paste. Or `cat prompt-[date]-[time].md | llm -t myTemplate "Please assist me using the attached prompt."`
+
+## Why?
+
+* Are there VS Code solutions for this? Yes. They are mostly buggy and use a ton of RAM.
+* Or, you could just let Claude run roughshod over your repo, and clean up for a few months afterwards.
+* Create a record of prompts and subtly modify and re-use them over time.
