@@ -1,6 +1,3 @@
-/home/lou/repos/costco/forge.digital.components  #<-- Base path to the project on your machine
-src/utils/data_fetcher.py
-tests/unit/test_data_fetcher.py
-src/models/user_data.ts
-docs/api/endpoints.md
-# You can add comments using #
+/home/lou/repos/costco/forge.digital.components/src/services/productService/getProductsInformation.ts
+/home/lou/repos/costco/forge.digital.components/src/services/productService/getProductsInformation.test.ts
+/home/lou/repos/costco/forge.digital.components/src/services/productService/lib.ts
