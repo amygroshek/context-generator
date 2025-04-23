@@ -15,10 +15,11 @@ cd scripts
 python generateContext.py --instructions "My specific request blah"
 ```
 
-6. The prompt will be generated to the `./output` directory with a date and time stamp. Simply open the newest file and copy and paste. Or `cat prompt-[date]-[time].md | llm -t myTemplate "Please assist me using the attached prompt."`
+6. The prompt will be generated to the `./output` directory with a date and time stamp. The prompt is also written to stdout so you can pipe it directly into llm-cli: `python generateContext.py --instructions "I've got a failing unit test in the included test file. Please help me troubleshoot the issue." | llm -t grok`.
 
 ## Why?
 
 * Are there VS Code solutions for this? Yes. They are mostly buggy and use a ton of RAM.
 * Or, you could just let Claude run roughshod over your repo, and clean up for a few months afterwards.
-* Create a record of prompts and subtly modify and re-use them over time.
+* This allows you to create a record of prompts and subtly modify and re-use them over time.
+* Fork the repo to save your own instructions or modify the script.
