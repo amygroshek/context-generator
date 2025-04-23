@@ -1,0 +1,3 @@
+blah terminal output
+
+blah blah terminal test failure
