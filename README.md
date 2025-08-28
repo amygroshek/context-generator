@@ -28,7 +28,7 @@ Another script will generate a diff between the current branch and a main branch
 ```bash
 python generateDiffContext.py \
   --instructions="Review my changes in the diff provided in context. I've added some other files for context as well. Please forus primarily on typos and other minor issues that would create unnecessary back-and-forth during the PR process." \
-  --repo="/home/lou/repos/costco/gdx-ux-cnsw-my-account" \
+  --repo="/home/lou/repos/blah/blah-bah" \
   --main-branch=develop | llm -t grok "Please review"
 ```
 
