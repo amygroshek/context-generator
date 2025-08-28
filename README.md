@@ -1,6 +1,6 @@
 # Context Generator
 
-Quickly generate a context file to pass to AI using a tool like (llm-cli)[https://github.com/simonw/llm].
+Quickly generate a context file to pass to AI using a tool like [llm-cli](https://github.com/simonw/llm).
 
 ## Quickstart
 
@@ -15,7 +15,22 @@ cd scripts
 python generateContext.py --instructions "My specific request blah"
 ```
 
-6. The prompt will be generated to the `./output` directory with a date and time stamp. The prompt is also written to stdout so you can pipe it directly into llm-cli: `python generateContext.py --instructions "I've got a failing unit test in the included test file. Please help me troubleshoot the issue." | llm -t grok`.
+6. The prompt will be generated to the `./output` directory with a date and time stamp. The prompt is also written to stdout so you can pipe it directly into llm-cli:
+```
+python generateContext.py --instructions "[instructions]" | llm -t grok --no-stream "instructions"
+python generateContext.py --instructions "[instructions]" | llm "instructions"
+```
+
+## Diff Context Option
+
+Another script will generate a diff between the current branch and a main branch in a repo indicated in an argument. The diff will be added to the contenxt, and you can ask for the LLM to assess the git diff.
+
+```bash
+python generateDiffContext.py \
+  --instructions="Review my changes in the diff provided in context. I've added some other files for context as well. Please forus primarily on typos and other minor issues that would create unnecessary back-and-forth during the PR process." \
+  --repo="/home/lou/repos/costco/gdx-ux-cnsw-my-account" \
+  --main-branch=develop | llm -t grok "Please review"
+```
 
 ## Why?
 
